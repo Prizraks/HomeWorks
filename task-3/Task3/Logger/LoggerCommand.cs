@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace Task3.Logger
+﻿namespace Task3.Logger
 {
     /// <summary>
     /// п.4 Команда, которая записывает информацию о выброшенном исключении в лог
@@ -8,16 +6,13 @@ namespace Task3.Logger
     public class LoggerCommand : ICommand
     {
         private Exception exception;
-        private StringBuilder log;
-        public LoggerCommand(Exception ex, StringBuilder log)
+        public LoggerCommand(Exception ex)
         {
             this.exception = ex;
-            this.log = log;
         }
         public void Execute()
         {
-            //Console.Write(exception.Message);
-            log.Append(exception.Message);
+            Console.Write(exception.Message);
         }
 
         public short Repeat { get; set; } = 0;
