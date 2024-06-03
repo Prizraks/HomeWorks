@@ -3,19 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-<<<<<<< task-2
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-2", "task-2", "{4210D177-F4E7-43E2-960D-0A3202552691}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task2", "task-2\Task2\Task2.csproj", "{B636A513-E47F-4A07-9CB9-5BFB1CB23B75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2.Tests", "task-2\Task2.Tests\Task2.Tests.csproj", "{C7B5ABD1-5144-4E66-834E-F9279D47A8BE}"
-=======
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task2.Tests", "task-2\Task2.Tests\Task2.Tests.csproj", "{C7B5ABD1-5144-4E66-834E-F9279D47A8BE}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-1", "task-1", "{9DC2B3A1-37B7-47C6-8B83-2B7719409FF7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task1", "task-1\Task1\Task1.csproj", "{DA4ABD93-9937-4DD0-94D6-8A6288606284}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1.Tests", "task-1\Task1.Tests\Task1.Tests.csproj", "{CE3EF7EC-7A35-4FC7-B4D4-FE5C12E906E6}"
->>>>>>> master
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task1.Tests", "task-1\Task1.Tests\Task1.Tests.csproj", "{CE3EF7EC-7A35-4FC7-B4D4-FE5C12E906E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task-3", "task-3", "{7848EF25-1D67-4FE0-A3E7-6C807D829181}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task3", "task-3\Task3\Task3.csproj", "{8DA79F2D-5093-4426-90DE-B03409FBFE5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3.Tests", "task-3\Task3.Tests\Task3.Tests.csproj", "{3E359BE1-C3D2-4B9F-AA4D-033D39B627AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,7 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-<<<<<<< task-2
 		{B636A513-E47F-4A07-9CB9-5BFB1CB23B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B636A513-E47F-4A07-9CB9-5BFB1CB23B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B636A513-E47F-4A07-9CB9-5BFB1CB23B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -32,7 +35,6 @@ Global
 		{C7B5ABD1-5144-4E66-834E-F9279D47A8BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7B5ABD1-5144-4E66-834E-F9279D47A8BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7B5ABD1-5144-4E66-834E-F9279D47A8BE}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
 		{DA4ABD93-9937-4DD0-94D6-8A6288606284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DA4ABD93-9937-4DD0-94D6-8A6288606284}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA4ABD93-9937-4DD0-94D6-8A6288606284}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,19 +43,25 @@ Global
 		{CE3EF7EC-7A35-4FC7-B4D4-FE5C12E906E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE3EF7EC-7A35-4FC7-B4D4-FE5C12E906E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE3EF7EC-7A35-4FC7-B4D4-FE5C12E906E6}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> master
+		{8DA79F2D-5093-4426-90DE-B03409FBFE5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA79F2D-5093-4426-90DE-B03409FBFE5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA79F2D-5093-4426-90DE-B03409FBFE5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA79F2D-5093-4426-90DE-B03409FBFE5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E359BE1-C3D2-4B9F-AA4D-033D39B627AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E359BE1-C3D2-4B9F-AA4D-033D39B627AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E359BE1-C3D2-4B9F-AA4D-033D39B627AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E359BE1-C3D2-4B9F-AA4D-033D39B627AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-<<<<<<< task-2
 		{B636A513-E47F-4A07-9CB9-5BFB1CB23B75} = {4210D177-F4E7-43E2-960D-0A3202552691}
 		{C7B5ABD1-5144-4E66-834E-F9279D47A8BE} = {4210D177-F4E7-43E2-960D-0A3202552691}
-=======
 		{DA4ABD93-9937-4DD0-94D6-8A6288606284} = {9DC2B3A1-37B7-47C6-8B83-2B7719409FF7}
 		{CE3EF7EC-7A35-4FC7-B4D4-FE5C12E906E6} = {9DC2B3A1-37B7-47C6-8B83-2B7719409FF7}
->>>>>>> master
+		{8DA79F2D-5093-4426-90DE-B03409FBFE5A} = {7848EF25-1D67-4FE0-A3E7-6C807D829181}
+		{3E359BE1-C3D2-4B9F-AA4D-033D39B627AB} = {7848EF25-1D67-4FE0-A3E7-6C807D829181}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8514E5A9-7209-4927-BEB3-37EE912B3C12}
