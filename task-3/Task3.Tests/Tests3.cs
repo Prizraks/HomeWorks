@@ -30,7 +30,7 @@
             {
                 exHandler.Handle(rotateCommand, e).Execute();
             }
-            Assert.Equal("Ошибка RotateCommand\r\n", stringWriter.ToString());
+            Assert.Equal("Ошибка RotateCommand\n", stringWriter.ToString());
         }
 
         [Fact]
@@ -140,7 +140,7 @@
                 }
             }
 
-            Assert.Equal("Повторная ошибка RotateCommand\r\n", stringWriter.ToString());
+            Assert.Equal("Повторная ошибка RotateCommand\n", stringWriter.ToString());
         }
 
         [Fact]
@@ -177,7 +177,7 @@
                 }
             }
 
-            Assert.Equal("3-я ошибка MoveCommand\r\n", stringWriter.ToString());
+            Assert.Equal("3-я ошибка MoveCommand\n", stringWriter.ToString());
         }
     }
 }
