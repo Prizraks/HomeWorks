@@ -1,4 +1,6 @@
-﻿namespace Task3.Logger
+﻿using System.Text;
+
+namespace Task3.Logger
 {
     /// <summary>
     /// Команда ставящая в очередь команду, пишущую в лог.
@@ -7,14 +9,16 @@
     {
         private Exception exception;
         private Queue<ICommand> queue;
-        public LoggerInQueueCommand(Exception ex, Queue<ICommand> queue)
+        private StringBuilder log;
+        public LoggerInQueueCommand(Exception ex, Queue<ICommand> queue, StringBuilder log)
         {
             this.exception = ex;
             this.queue = queue;
+            this.log = log;
         }
         public void Execute()
         {
-            queue.Enqueue(new LoggerCommand(exception));
+            queue.Enqueue(new LoggerCommand(exception, log));
         }
 
         public short Repeat { get; set; } = 0;

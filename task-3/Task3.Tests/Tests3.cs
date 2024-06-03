@@ -1,5 +1,6 @@
 ﻿namespace Task3.Tests
 {
+    using System.Text;
     using Task3.Logger;
     using Task3.Move;
     using Task3.Repeaters;
@@ -12,15 +13,14 @@
         public void Test4()
         {
             //Act
-            var stringWriter = new StringWriter();
-            Console.SetOut(stringWriter);
-
             var rotateCommand = new RotateCommand();
             var exHandler = new ExceptionHandler();
+            StringBuilder log = new StringBuilder();
+
             exHandler.RegisterHandler(
                 typeof(RotateCommand),
                 typeof(Exception),
-                (a, b) => new LoggerCommand(b));
+                (a, b) => new LoggerCommand(b, log));
 
             try
             {
@@ -30,7 +30,7 @@
             {
                 exHandler.Handle(rotateCommand, e).Execute();
             }
-            Assert.Equal("Ошибка RotateCommand", stringWriter.ToString());
+            Assert.Equal("Ошибка RotateCommand", log.ToString());
         }
 
         [Fact]
@@ -40,11 +40,13 @@
             //Act
             var rotateCommand = new RotateCommand();
             var queue = new Queue<ICommand>();
+            StringBuilder log = new StringBuilder();
+
             var exHandler = new ExceptionHandler();
             exHandler.RegisterHandler(
                 typeof(RotateCommand),
                 typeof(Exception),
-                (a, b) => new LoggerInQueueCommand(b, queue));
+                (a, b) => new LoggerInQueueCommand(b, queue, log));
 
             try
             {
@@ -111,10 +113,8 @@
         public void Test8()
         {
             //Act
-            var stringWriter = new StringWriter();
-            Console.SetOut(stringWriter);
-
             var rotateCommand = new RotateCommand();
+            StringBuilder log = new StringBuilder();
             var queue = new Queue<ICommand>();
             queue.Enqueue(rotateCommand);
 
@@ -126,7 +126,7 @@
             exHandler.RegisterHandler(
                 typeof(RotateCommand),
                 typeof(RepeaterException),
-                (a, b) => new LoggerCommand(b));
+                (a, b) => new LoggerCommand(b, log));
 
             while (queue.Count != 0)
             {
@@ -140,7 +140,7 @@
                 }
             }
 
-            Assert.Equal("Повторная ошибка RotateCommand", stringWriter.ToString());
+            Assert.Equal("Повторная ошибка RotateCommand", log.ToString());
         }
 
         [Fact]
@@ -148,8 +148,7 @@
         public void Test9()
         {
             //Act
-            var stringWriter = new StringWriter();
-            Console.SetOut(stringWriter);
+            StringBuilder log = new StringBuilder();
 
             var moveCommand = new MoveCommand();
             var queue = new Queue<ICommand>();
@@ -163,7 +162,7 @@
             exHandler.RegisterHandler(
                 typeof(MoveCommand),
                 typeof(RepeaterException),
-                (a, b) => new LoggerCommand(b));
+                (a, b) => new LoggerCommand(b, log));
 
             while (queue.Count != 0)
             {
@@ -177,7 +176,7 @@
                 }
             }
 
-            Assert.Equal("3-я ошибка MoveCommand", stringWriter.ToString());
+            Assert.Equal("3-я ошибка MoveCommand", log.ToString());
         }
     }
 }
