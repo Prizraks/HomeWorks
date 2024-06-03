@@ -12,7 +12,7 @@
         }
         public void Execute()
         {
-            Console.WriteLine(exception.Message);
+            Console.Write(exception.Message);
         }
 
         public short Repeat { get; set; } = 0;
